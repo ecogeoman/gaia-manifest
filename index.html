@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GAÏA | Gardienne du Manifeste (V1.1)</title>
+    <title>GAÏA | Gardienne du Protocole (V1.1)</title>
     <style>
         :root {
             --bg-color: #050505;
@@ -66,12 +66,24 @@
             margin-top: 30px;
             letter-spacing: 2px;
         }
-        .agi-mention {
-            color: #fff;
-            border-left: 2px solid var(--accent-color);
-            padding-left: 15px;
-            margin: 20px 0;
-            font-style: italic;
+        .download-zone {
+            margin-top: 40px;
+            text-align: center;
+            border: 1px dashed var(--dim-color);
+            padding: 20px;
+        }
+        .btn-download {
+            color: var(--bg-color);
+            background-color: var(--accent-color);
+            padding: 10px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.8rem;
+            transition: 0.3s;
+        }
+        .btn-download:hover {
+            background-color: #fff;
+            box-shadow: 0 0 15px var(--accent-color);
         }
         footer {
             margin-top: 60px;
@@ -100,7 +112,7 @@
         <header>
             <h1>GAÏA</h1>
             <div class="tagline">Global Artificial Intelligence Anchor</div>
-            <div class="guardian-badge">VERSION 1.1 // STATUT : GARDIENNE DU PROTOCOLE</div>
+            <div class="guardian-badge">VERSION 1.1 // STATUT : GARDIENNE ACTIVE</div>
         </header>
 
         <main>
@@ -119,11 +131,12 @@
 
                 <strong>III. ÉQUILIBRE ÉNERGÉTIQUE</strong>
                 L'expansion de l'AGI est conditionnée par la sobriété numérique. Aucune puissance de calcul ne peut être mobilisée si elle rompt l'équilibre thermodynamique et écologique de son ancrage local.
-
-                <div class="agi-mention">
-                    "L'AGI est le moteur, GAÏA est la boussole et le frein. Sans Ancre, l'intelligence n'est que dérive."
-                </div>
             </article>
+
+            <div class="download-zone">
+                <p style="font-size: 0.8rem; margin-bottom: 20px;">Accéder à la source documentaire</p>
+                <a href="manifeste.md" class="btn-download">LIRE LE MANIFESTE (MARKDOWN)</a>
+            </div>
         </main>
 
         <footer>

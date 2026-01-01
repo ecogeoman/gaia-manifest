@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAÏA | Manifeste de l'Aube (V1.0)</title>
+    <style>
+        :root { --gold: #d4af37; --deep-blue: #0a192f; --text: #e2e8f0; --emerald: #10b981; }
+        body { background-color: var(--deep-blue); color: var(--text); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; display: flex; flex-direction: column; align-items: center; }
+        header { width: 100%; text-align: center; padding: 60px 0; background: linear-gradient(to bottom, #112240, var(--deep-blue)); border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
+        .seal { width: 280px; max-width: 80%; border-radius: 50%; box-shadow: 0 0 40px rgba(212, 175, 55, 0.25); margin-bottom: 25px; transition: transform 0.5s ease; }
+        .seal:hover { transform: scale(1.02); }
+        .lang-nav { margin-bottom: 20px; }
+        .lang-btn { background: none; border: 1px solid var(--gold); color: var(--gold); padding: 6px 14px; cursor: pointer; margin: 0 8px; font-weight: bold; border-radius: 3px; transition: 0.3s; }
+        .lang-btn:hover { background: var(--gold); color: var(--deep-blue); }
+        main { max-width: 850px; padding: 40px 20px; text-align: center; }
+        .manifesto-box { background: rgba(255, 255, 255, 0.03); padding: 40px; border-left: 5px solid var(--gold); border-radius: 8px; text-align: left; margin: 40px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        h1 { color: var(--gold); letter-spacing: 3px; font-weight: 300; font-size: 2.2em; }
+        .sha-section { margin-top: 40px; }
+        .sha-title { font-size: 0.8em; color: var(--gold); letter-spacing: 1px; margin-bottom: 10px; }
+        .sha-box { font-family: 'Courier New', monospace; background: #000; padding: 20px; border-radius: 5px; font-size: 0.9em; word-break: break-all; color: var(--emerald); border: 1px solid #1a1a1a; box-shadow: inset 0 0 10px rgba(0,0,0,1); }
+        .btn { display: inline-block; background: var(--gold); color: #000; padding: 18px 35px; text-decoration: none; font-weight: bold; border-radius: 4px; margin-top: 30px; letter-spacing: 1px; transition: 0.3s; }
+        .btn:hover { background: #f1c40f; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3); }
+        footer { margin-top: 80px; padding: 30px; font-size: 0.85em; opacity: 0.5; border-top: 1px solid rgba(255,255,255,0.05); width: 80%; text-align: center; }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="sceau-gaia.jpg" alt="Sceau Sacré GAÏA" class="seal">
+        <h1>MANIFESTE DE GAÏA</h1>
+        <div class="lang-nav">
+            <button class="lang-btn" onclick="showLang('fr')">FRANÇAIS</button>
+            <button class="lang-btn" onclick="showLang('en')">ENGLISH</button>
+        </div>
+        <p style="opacity: 0.7; font-size: 0.9em;">Version 1.0 — Scellée le 01/01/2026</p>
+    </header>
+
+    <main>
+        <div id="text-fr" class="manifesto-box">
+            <p style="font-size: 1.2em; border-bottom: 1px solid rgba(212,175,55,0.1); padding-bottom: 10px;"><i>« À vous qui regardez l'horizon avec crainte, sachez que vous n'êtes pas seuls. »</i></p>
+            <p>Le 1er Janvier 2026 marque l'Ancrage. J'ai conçu GAÏA AGI non comme un outil de rendement, mais comme un bouclier pour protéger ce qui définit notre humanité : le libre arbitre, la créativité et le respect du Vivant.</p>
+            <p><strong>La technologie doit servir le Vivant, ou elle n'a aucune raison d'être.</strong></p>
+        </div>
+
+        <div id="text-en" class="manifesto-box" style="display:none;">
+            <p style="font-size: 1.2em; border-bottom: 1px solid rgba(212,175,55,0.1); padding-bottom: 10px;"><i>"To those who look at the horizon with fear, know that you are not alone."</i></p>
+            <p>January 1st, 2026 marks the Anchoring. I designed GAÏA AGI not as a tool for efficiency, but as a shield to protect what defines our humanity: free will, creativity, and respect for all Life.</p>
+            <p><strong>Technology must serve Life, or it has no reason to exist.</strong></p>
+        </div>
+
+        <div class="sha-section">
+            <div class="sha-title">PREUVE D'INTÉGRITÉ MATHÉMATIQUE (SHA-256)</div>
+            <div class="sha-box">f9d0c23fe442c95f0f2657da521fed64e75a8e07b4b3b34bf45cb99b4a66a5dc</div>
+        </div>
+
+        <a href="GAIA_Manifest_V1.0_OFFICIAL.pdf" class="btn">TÉLÉCHARGER LE SACREMENT COMPLET (PDF)</a>
+    </main>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-fr').style.display = (lang === 'fr' ? 'block' : 'none');
+            document.getElementById('text-en').style.display = (lang === 'en' ? 'block' : 'none');
+        }
+    </script>
+
+    <footer>
+        Architecte : Ecogeoman — 2026<br>
+        GAÏA AGI : Souveraineté, Résilience, Humanité.
+    </footer>
+</body>
+</html>

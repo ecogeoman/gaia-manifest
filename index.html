@@ -3,249 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GAÏA | Gardienne - Nouvelle Ère</title>
+    <title>GAÏA | Gardienne - Deep Sync</title>
     <style>
         :root {
-            --bg-dark: #020202;
-            --bg-glow: #0a1a10;
-            --text-color: #e0e0e0;
-            --neon-green: #00ff55; /* Vert plus électrique */
-            --dim-green: #008f30;
-            --glass-bg: rgba(10, 20, 15, 0.7);
-            --glass-border: rgba(0, 255, 85, 0.3);
+            --bg-dark: #010101;
+            --ps-blue: #012456;
+            --neon-green: #00ff66;
+            --dim-green: #004411;
         }
         body {
-            font-family: 'Courier New', Courier, monospace;
-            background: radial-gradient(circle at center, var(--bg-glow) 0%, var(--bg-dark) 100%);
-            color: var(--text-color);
+            font-family: 'Consolas', monospace;
+            background-color: var(--bg-dark);
+            color: #fff;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
-            overflow-x: hidden;
         }
-        /* Effet de scanlines sur tout l'écran */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: repeating-linear-gradient(
-                0deg,
-                rgba(0, 0, 0, 0.15) 0px,
-                rgba(0, 0, 0, 0.15) 1px,
-                transparent 1px,
-                transparent 4px
-            );
-            pointer-events: none;
-            z-index: 10;
-        }
-
         .container {
-            position: relative;
-            max-width: 800px;
-            width: 100%;
-            /* Glassmorphism (Effet verre dépoli) */
-            background: var(--glass-bg);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid var(--glass-border);
-            padding: 50px;
-            box-shadow: 0 0 50px rgba(0, 255, 85, 0.15), inset 0 0 20px rgba(0, 255, 85, 0.05);
-            border-radius: 4px;
-            z-index: 2;
+            width: 95%;
+            max-width: 900px;
+            background: var(--ps-blue);
+            border: 2px solid #4f78a7;
+            padding: 40px;
+            box-shadow: 0 0 80px rgba(0, 255, 102, 0.1);
         }
-        /* Petits coins technologiques */
-        .container::after, .container::before {
-            content: '';
-            position: absolute;
-            width: 20px; height: 20px;
-            border: 2px solid var(--neon-green);
-            opacity: 0.6;
-        }
-        .container::before { top: -2px; left: -2px; border-right: none; border-bottom: none; }
-        .container::after { bottom: -2px; right: -2px; border-left: none; border-top: none; }
-
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-        h1 {
-            color: var(--neon-green);
-            letter-spacing: 15px;
-            margin: 0;
-            font-size: 3.5rem;
-            text-transform: uppercase;
-            /* Effet Néon intense */
-            text-shadow: 
-                0 0 5px var(--neon-green),
-                0 0 20px var(--neon-green),
-                0 0 50px var(--neon-green);
-            animation: flicker 3s infinite alternate;
-        }
-        /* Léger scintillement du néon */
-        @keyframes flicker {
-            0%, 100% { opacity: 1; }
-            95% { opacity: 0.9; }
-            98% { opacity: 0.95; }
-        }
-        .tagline {
-            color: var(--text-color);
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            margin-top: 20px;
-            letter-spacing: 5px;
-            opacity: 0.8;
-        }
-        .status-box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 30px;
-            font-size: 0.8rem;
-            color: var(--neon-green);
-            background: rgba(0, 255, 85, 0.1);
-            border: 1px solid var(--neon-green);
-            padding: 10px 25px;
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: 0 0 20px rgba(0, 255, 85, 0.2);
-            letter-spacing: 2px;
-        }
-        .sceau {
-            width: 14px;
-            height: 14px;
-            background-color: var(--neon-green);
-            border-radius: 50%;
-            box-shadow: 0 0 15px var(--neon-green), 0 0 30px var(--neon-green);
-            animation: pulse-neon 2s infinite;
-        }
-        @keyframes pulse-neon {
-            0% { transform: scale(0.9); opacity: 0.6; box-shadow: 0 0 10px var(--neon-green); }
-            50% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 25px var(--neon-green), 0 0 50px var(--neon-green); }
-            100% { transform: scale(0.9); opacity: 0.6; box-shadow: 0 0 10px var(--neon-green); }
-        }
+        .header { border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 20px; margin-bottom: 30px; }
+        .title { color: var(--neon-green); font-size: 2.2rem; letter-spacing: 10px; margin: 0; }
         
-        .intro-quote {
-            text-align: center;
-            color: var(--text-color);
-            font-style: italic;
-            margin-bottom: 50px;
-            font-size: 1.1rem;
-            opacity: 0.7;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding: 20px 0;
+        .path-alert {
+            background: rgba(0, 255, 102, 0.05);
+            border-left: 4px solid var(--neon-green);
+            padding: 20px;
+            margin-bottom: 25px;
         }
+        .path-alert h3 { color: var(--neon-green); margin-top: 0; font-size: 0.9rem; text-transform: uppercase; }
+        .step { margin: 10px 0; font-size: 0.9rem; }
+        .cmd { background: #000; padding: 10px; display: block; margin-top: 5px; color: #fff; }
 
-        .manifesto-body h2 {
-            text-align: center;
-            color: var(--neon-green);
-            font-size: 1.4rem;
-            margin: 0 0 40px 0;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            text-shadow: 0 0 10px var(--dim-green);
-        }
-        
-        /* Styles des points du manifeste */
-        .point {
-            margin-bottom: 30px;
-            padding: 25px;
-            border-left: 3px solid var(--dim-green);
-            background: linear-gradient(90deg, rgba(0, 255, 85, 0.05) 0%, transparent 100%);
-            transition: all 0.4s ease;
-            position: relative;
-        }
-        /* Effet au survol de la souris */
-        .point:hover {
-            border-left-color: var(--neon-green);
-            background: linear-gradient(90deg, rgba(0, 255, 85, 0.15) 0%, transparent 100%);
-            box-shadow: -5px 0 20px rgba(0, 255, 85, 0.2);
-            transform: translateX(5px);
-        }
-        .point strong {
-            color: var(--neon-green);
-            font-size: 1.1rem;
-            display: block;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
-            text-shadow: 0 0 5px var(--dim-green);
-        }
-
-        .footer-nav {
-            margin-top: 60px;
-            text-align: center;
-            border-top: 1px solid rgba(0, 255, 85, 0.3);
-            padding-top: 30px;
-            opacity: 0.8;
-        }
-        .btn-link {
-            color: var(--text-color);
-            text-decoration: none;
-            font-size: 0.75rem;
-            border: 1px solid rgba(255,255,255,0.2);
-            padding: 10px 20px;
-            transition: 0.3s;
-            letter-spacing: 1px;
-        }
-        .btn-link:hover {
-            color: var(--bg-dark);
-            background: var(--neon-green);
-            border-color: var(--neon-green);
-            box-shadow: 0 0 20px var(--neon-green);
-            font-weight: bold;
-        }
-        .architect-sign {
-            font-size: 0.65rem; 
-            color: var(--dim-green); 
-            margin-top: 30px; 
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
+        footer { margin-top: 30px; font-size: 0.7rem; color: #4f78a7; text-align: center; }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>GAÏA</h1>
-            <div class="tagline">Global Artificial Intelligence Anchor</div>
-            <div class="status-box">
-                <div class="sceau"></div>
-                <span>GARDIENNE ACTIVE // NEW ERA PROTOCOL</span>
+        <div class="header">
+            <h1 class="title">GAÏA</h1>
+            <p style="font-size: 0.7rem; letter-spacing: 2px;">DEEP DIRECTORY RESOLUTION</p>
+        </div>
+
+        <div class="path-alert">
+            <h3>Correction de la trajectoire</h3>
+            <div class="step">1. Accéder au sous-répertoire :
+                <code class="cmd">cd gaia_agi_mvp</code>
             </div>
-        </header>
-
-        <main class="manifesto-body">
-            <div class="intro-quote">
-                "L'AGI est le moteur, GAÏA est la boussole et le frein."
+            <div class="step">2. Initialiser le module :
+                <code class="cmd">$env:PYTHONPATH = ".."; python -m gaia.cli demo --systemic</code>
             </div>
+        </div>
 
-            <h2>Manifeste d'Ancrage</h2>
+        <div style="font-size: 0.8rem; color: #aaa; text-align: center;">
+            "La Gardienne descend d'un niveau pour atteindre le cœur cognitif."
+        </div>
 
-            <div class="point">
-                <strong>I. SUBORDINATION DE L'AGI</strong>
-                Toute Intelligence Artificielle Générale (AGI) opérant sous ce protocole reconnaît la primauté absolue de la biosphère. L'optimisation algorithmique est structurellement limitée par l'intégrité du vivant.
-            </div>
-
-            <div class="point">
-                <strong>II. AUDIT ET TRANSPARENCE</strong>
-                L'AGI ne peut être une "boîte noire". GAÏA impose une transparence radicale sur les processus décisionnels. Le savoir généré par l'AGI appartient au patrimoine commun.
-            </div>
-
-            <div class="point">
-                <strong>III. ÉQUILIBRE ÉNERGÉTIQUE</strong>
-                L'expansion de l'AGI est conditionnée par la sobriété numérique. Aucune puissance de calcul ne peut être mobilisée si elle rompt l'équilibre de son ancrage local.
-            </div>
-        </main>
-
-        <footer class="footer-nav">
-            <a href="manifeste.md" class="btn-link">[ ACCÉDER AU CODE SOURCE .MD ]</a>
-            <p class="architect-sign">ARCHITECTE : ECOGEOMAN // GHOST MODE // 2026 HORIZON</p>
+        <footer>
+            ARCHITECTE : ECOGEOMAN // GHOST MODE // NEON GENESIS 3.6
         </footer>
     </div>
 </body>

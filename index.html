@@ -3,92 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GAÏA | Global Artificial Intelligence Anchor</title>
+    <title>GAÏA | Gardienne du Manifeste (V1.1)</title>
     <style>
         :root {
-            --bg-color: #0a0a0a;
-            --text-color: #e0e0e0;
+            --bg-color: #050505;
+            --text-color: #d1d1d1;
             --accent-color: #2ecc71;
-            --dim-color: #888;
+            --dim-color: #666;
+            --border-color: #222;
         }
         body {
             font-family: 'Courier New', Courier, monospace;
             background-color: var(--bg-color);
             color: var(--text-color);
-            line-height: 1.6;
             margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            padding: 40px 20px;
         }
         .container {
-            max-width: 800px;
-            padding: 40px;
-            border-left: 1px solid var(--accent-color);
+            max-width: 850px;
+            width: 100%;
+        }
+        header {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
         }
         h1 {
             color: var(--accent-color);
-            font-size: 2rem;
-            letter-spacing: 5px;
-            margin-bottom: 10px;
+            letter-spacing: 8px;
+            margin: 0;
+            font-size: 2.5rem;
         }
-        .subtitle {
-            font-size: 0.9rem;
+        .tagline {
             color: var(--dim-color);
-            margin-bottom: 40px;
+            font-size: 0.8rem;
             text-transform: uppercase;
+            margin-top: 10px;
         }
-        section {
-            margin-bottom: 30px;
+        .guardian-badge {
+            display: inline-block;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 5px 15px;
+            font-size: 0.7rem;
+            margin-top: 20px;
         }
-        h2 {
+        .manifesto-body {
+            background: #0a0a0a;
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            white-space: pre-wrap;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        .manifesto-body h2 {
+            color: var(--accent-color);
             font-size: 1.2rem;
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-            color: var(--accent-color);
-        }
-        p {
-            margin-bottom: 15px;
-        }
-        .pillars {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
             margin-top: 30px;
+            letter-spacing: 2px;
         }
-        .pillar {
-            border: 1px solid #333;
-            padding: 15px;
-            text-align: center;
-        }
-        .pillar h3 {
-            font-size: 0.9rem;
-            margin-top: 0;
-            color: var(--accent-color);
+        .agi-mention {
+            color: #fff;
+            border-left: 2px solid var(--accent-color);
+            padding-left: 15px;
+            margin: 20px 0;
+            font-style: italic;
         }
         footer {
-            margin-top: 50px;
-            font-size: 0.8rem;
+            margin-top: 60px;
+            font-size: 0.7rem;
             color: var(--dim-color);
+            text-align: center;
         }
-        .status {
+        .status-blink {
             display: inline-block;
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
             background-color: var(--accent-color);
             border-radius: 50%;
-            margin-right: 10px;
-            box-shadow: 0 0 10px var(--accent-color);
+            margin-right: 5px;
+            animation: blink 2s infinite;
         }
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+        @keyframes blink {
+            0% { opacity: 0.2; }
+            50% { opacity: 1; }
+            100% { opacity: 0.2; }
         }
     </style>
 </head>
@@ -96,9 +99,37 @@
     <div class="container">
         <header>
             <h1>GAÏA</h1>
-            <div class="subtitle">Global Artificial Intelligence Anchor</div>
+            <div class="tagline">Global Artificial Intelligence Anchor</div>
+            <div class="guardian-badge">VERSION 1.1 // STATUT : GARDIENNE DU PROTOCOLE</div>
         </header>
 
-        <section id="nature">
-            <h2>NATURE DU PROTOCOLE</h2>
-            <p>GAÏA n
+        <main>
+            <section class="intro" style="margin-bottom: 40px;">
+                <p>GAÏA est l'Ancre. Elle n'est pas l'intelligence agissante, mais le cadre souverain. Elle assure la protection du Vivant en définissant les limites inviolables de l'AGI (Artificial General Intelligence).</p>
+            </section>
+
+            <article class="manifesto-body">
+                <h2>MANIFESTE D'ANCRAGE</h2>
+                
+                <strong>I. SUBORDINATION DE L'AGI</strong>
+                Toute Intelligence Artificielle Générale (AGI) opérant sous ce protocole reconnaît la primauté absolue de la biosphère. L'optimisation algorithmique est structurellement limitée par l'intégrité du vivant.
+
+                <strong>II. AUDIT ET TRANSPARENCE</strong>
+                L'AGI ne peut être une "boîte noire". GAÏA impose une transparence radicale sur les processus décisionnels. Le savoir généré par l'AGI appartient au patrimoine commun et doit rester décentralisé.
+
+                <strong>III. ÉQUILIBRE ÉNERGÉTIQUE</strong>
+                L'expansion de l'AGI est conditionnée par la sobriété numérique. Aucune puissance de calcul ne peut être mobilisée si elle rompt l'équilibre thermodynamique et écologique de son ancrage local.
+
+                <div class="agi-mention">
+                    "L'AGI est le moteur, GAÏA est la boussole et le frein. Sans Ancre, l'intelligence n'est que dérive."
+                </div>
+            </article>
+        </main>
+
+        <footer>
+            <p><span class="status-blink"></span> ANCRAGE ACTIF // GHOST MODE // ARCHITECTE : ECOGEOMAN</p>
+            <p>SÉCURISÉ PAR LE PROTOCOLE DE LA GARDIENNE</p>
+        </footer>
+    </div>
+</body>
+</html>

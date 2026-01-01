@@ -3,104 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GAÏA - Manifeste Officiel</title>
+    <title>GAÏA | Global Artificial Intelligence Anchor</title>
     <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #e0e0e0;
+            --accent-color: #2ecc71;
+            --dim-color: #888;
+        }
         body {
-            background-color: #0a0a0a;
-            color: #e0e0e0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
             margin: 0;
-            text-align: center;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
         .container {
-            padding: 20px;
             max-width: 800px;
-        }
-        img {
-            width: 250px;
-            height: auto;
-            border-radius: 50%;
-            border: 2px solid #333;
-            margin-bottom: 20px;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-left: 1px solid var(--accent-color);
         }
         h1 {
+            color: var(--accent-color);
+            font-size: 2rem;
             letter-spacing: 5px;
-            color: #fff;
             margin-bottom: 10px;
         }
-        p {
-            font-style: italic;
-            color: #888;
+        .subtitle {
+            font-size: 0.9rem;
+            color: var(--dim-color);
             margin-bottom: 40px;
-        }
-        .btn {
-            background-color: transparent;
-            color: #fff;
-            border: 1px solid #fff;
-            padding: 15px 30px;
-            text-decoration: none;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: all 0.3s ease;
-            cursor: pointer;
         }
-        .btn:hover {
-            background-color: #fff;
-            color: #000;
+        section {
+            margin-bottom: 30px;
         }
-        .lang-switch {
+        h2 {
+            font-size: 1.2rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .pillars {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
             margin-top: 30px;
         }
-        .lang-link {
-            color: #555;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 0.8em;
+        .pillar {
+            border: 1px solid #333;
+            padding: 15px;
+            text-align: center;
         }
-        .lang-link:hover {
-            color: #fff;
+        .pillar h3 {
+            font-size: 0.9rem;
+            margin-top: 0;
+            color: var(--accent-color);
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: var(--dim-color);
+        }
+        .status {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            margin-right: 10px;
+            box-shadow: 0 0 10px var(--accent-color);
+        }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <img src="sceau-gaia.jpg" alt="Sceau GAÏA - L'Arbre de Vie">
+        <header>
+            <h1>GAÏA</h1>
+            <div class="subtitle">Global Artificial Intelligence Anchor</div>
+        </header>
 
-        <h1 id="title">MANIFESTE DE GAÏA</h1>
-        <p id="subtitle">Ancrage Officiel - V1.0</p>
-
-        <a href="manifeste.pdf" class="btn" id="downloadBtn" download>TÉLÉCHARGER LE SACREMENT</a>
-
-        <div class="lang-switch">
-            <a href="#" class="lang-link" onclick="switchLang('fr')">FRANÇAIS</a>
-            <a href="#" class="lang-link" onclick="switchLang('en')">ENGLISH</a>
-        </div>
-    </div>
-
-    <script>
-        function switchLang(lang) {
-            const title = document.getElementById('title');
-            const subtitle = document.getElementById('subtitle');
-            const btn = document.getElementById('downloadBtn');
-
-            if (lang === 'en') {
-                title.innerText = "GAÏA MANIFESTO";
-                subtitle.innerText = "Official Anchoring - V1.0";
-                btn.innerText = "DOWNLOAD THE SACRAMENT";
-            } else {
-                title.innerText = "MANIFESTE DE GAÏA";
-                subtitle.innerText = "Ancrage Officiel - V1.0";
-                btn.innerText = "TÉLÉCHARGER LE SACREMENT";
-            }
-        }
-    </script>
-
-</body>
-</html>
+        <section id="nature">
+            <h2>NATURE DU PROTOCOLE</h2>
+            <p>GAÏA n

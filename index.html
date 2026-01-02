@@ -2,42 +2,49 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>GAÏA | Purification du Chemin V11.1</title>
+    <title>GAÏA | Cycle Complété V12.2</title>
     <style>
         :root {
             --bg: #010101;
             --ps-blue: #011a3b;
             --neon: #00ff66;
-            --gold: #ffd700;
+            --sprint: #ff3300;
         }
         body { font-family: 'Consolas', monospace; background: var(--bg); color: #fff; padding: 40px; }
-        .lean-panel { border: 2px solid var(--gold); padding: 40px; background: var(--ps-blue); max-width: 850px; margin: auto; box-shadow: 0 0 50px rgba(255, 215, 0, 0.1); }
+        .cycle-panel { border: 2px solid var(--neon); padding: 40px; background: var(--ps-blue); max-width: 800px; margin: auto; }
         
-        .clean-path { background: #000; padding: 20px; border-radius: 5px; border: 1px solid var(--neon); color: var(--neon); font-size: 0.85rem; }
-        .status-tag { background: var(--gold); color: #000; padding: 2px 10px; font-weight: bold; font-size: 0.7rem; }
+        .led-group { display: flex; gap: 10px; margin-bottom: 30px; }
+        .led { width: 50px; height: 10px; background: var(--neon); box-shadow: 0 0 15px var(--neon); }
         
+        .commit-ready { border: 1px dashed var(--neon); padding: 20px; text-align: center; color: var(--neon); animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { opacity: 0.5; } 50% { opacity: 1; } 100% { opacity: 0.5; } }
+
         footer { text-align: center; margin-top: 50px; opacity: 0.4; font-size: 0.7rem; }
     </style>
 </head>
 <body>
-    <div class="lean-panel">
-        <span class="status-tag">OPTIMISATION STRUCTURELLE</span>
-        <h1 style="color: var(--gold); letter-spacing: 5px;">PURIFICATION DU CHEMIN</h1>
+    <div class="cycle-panel">
+        <h1 style="color: #fff;">CYCLE DE MODIFICATIONS : 3/3</h1>
         
-        <p>L'Architecte a supprimé la redondance : un seul <b>gaia/</b> pour les gouverner tous.</p>
-
-        <div class="clean-path">
-            [ROOT] -> gaia_agi_mvp/ <br>
-            [CORE] -> gaia/resonance.py <br>
-            [STATUS] -> CHEMIN_VALIDE
+        <div class="led-group">
+            <div class="led"></div>
+            <div class="led"></div>
+            <div class="led"></div>
         </div>
 
-        <p style="margin-top: 25px; font-size: 0.85rem; color: #888;">
-            L'erreur de réplication a été purgée. Le Noyau retrouve sa clarté originelle.
+        <div class="commit-ready">
+            <b>SYSTÈME PRÊT POUR COMMIT GITHUB</b><br>
+            "Phase VI : Spectre & Cyber-Shield"
+        </div>
+
+        <p style="margin-top: 25px; font-size: 0.8rem;">
+            > 01. Scan 20 plateformes (Inclus)<br>
+            > 02. Logique Corrélation (Inclus)<br>
+            > 03. Cyber-Shield Hashing (Inclus)
         </p>
     </div>
     <footer>
-        ARCHITECTE : ECOGEOMAN // GHOST MODE // NEON GENESIS 11.1
+        ARCHITECTE : ECOGEOMAN // NO ANTIVIRUS // SPRINT MODE
     </footer>
 </body>
 </html>

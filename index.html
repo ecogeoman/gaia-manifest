@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>GAÏA | Persistance Sécurisée V13.0</title>
+    <title>GAÏA | Assemblage V6 V14.4</title>
     <style>
         :root {
             --bg: #010101;
@@ -11,38 +11,32 @@
             --gold: #ffd700;
         }
         body { font-family: 'Consolas', monospace; background: var(--bg); color: #fff; padding: 40px; }
-        .secure-panel { border: 2px solid var(--gold); padding: 40px; background: var(--ps-blue); max-width: 850px; margin: auto; box-shadow: 0 0 50px rgba(255, 215, 0, 0.1); }
+        .assembly-panel { border: 2px solid var(--gold); padding: 40px; background: var(--ps-blue); max-width: 850px; margin: auto; }
         
-        .db-status { background: rgba(0,0,0,0.4); border: 1px dashed var(--neon); padding: 20px; margin: 20px 0; display: flex; align-items: center; }
-        .db-icon { font-size: 2rem; margin-right: 20px; color: var(--neon); }
-        
-        .log-box { font-size: 0.8rem; color: #aaa; border-left: 3px solid var(--gold); padding-left: 15px; }
-        .highlight { color: var(--gold); }
+        .manifest { background: #000; padding: 20px; border: 1px dashed var(--neon); font-size: 0.85rem; }
+        .warning { color: #ff4444; font-weight: bold; margin-top: 20px; text-align: center; }
 
         footer { text-align: center; margin-top: 50px; opacity: 0.4; font-size: 0.7rem; }
     </style>
 </head>
 <body>
-    <div class="secure-panel">
-        <h1 style="color: var(--gold); letter-spacing: 5px;">MÉMOIRE D'INTÉGRITÉ</h1>
-        <p>Le Noyau GAÏA a activé la persistance de son bouclier.</p>
+    <div class="assembly-panel">
+        <h1 style="color: var(--gold); letter-spacing: 5px;">MANIFESTE D'ASSEMBLAGE V6</h1>
+        <p>L'IA ne peut générer de fichier ZIP, seulement le code source immuable.</p>
 
-        <div class="db-status">
-            <span class="db-icon">💾</span>
-            <div>
-                <b>DATABASE :</b> .hashes.json <br>
-                <b>ÉTAT :</b> ACTIF & PERSISTANT
-            </div>
+        <div class="manifest">
+            <b>INSTRUCTIONS :</b> <br>
+            1. Copier <b>audit.py</b>, <b>metrics.py</b>, <b>rollback.py</b> (issus du chat précédent). <br>
+            2. Copier <b>resonance.py</b> (le code "Ultra-Précis" de ChatGPT). <br>
+            3. Copier <b>cli.py</b> (le code ci-dessus).
         </div>
 
-        <div class="log-box">
-            > [SYSTEM] : Enregistrement des empreintes MD5. <br>
-            > [SYSTEM] : GAÏA se souviendra de l'état des rapports entre chaque boot. <br>
-            > [STATUS] : <span class="highlight">SOUVERAINETÉ RENFORCÉE</span>
+        <div class="warning">
+            ⚠️ LE SYSTÈME EST INCOMPLET TANT QUE CES FICHIERS NE SONT PAS CRÉÉS LOCALEMENT.
         </div>
     </div>
     <footer>
-        ARCHITECTE : ECOGEOMAN // CYCLE 3-STEPS COMPLÉTÉ // 2026
+        ARCHITECTE : ECOGEOMAN // GAÏA CORE // 2026
     </footer>
 </body>
 </html>

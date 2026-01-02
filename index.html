@@ -2,72 +2,88 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GAÏA | Gardienne - Deep Sync</title>
+    <title>GAÏA | Audit de Transparence</title>
     <style>
         :root {
-            --bg-dark: #010101;
+            --bg: #010101;
             --ps-blue: #012456;
-            --neon-green: #00ff66;
-            --dim-green: #004411;
+            --neon: #00ff66;
+            --gold: #ffd700;
         }
         body {
             font-family: 'Consolas', monospace;
-            background-color: var(--bg-dark);
+            background: var(--bg);
             color: #fff;
             margin: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            padding: 40px;
         }
-        .container {
-            width: 95%;
+        .audit-panel {
+            width: 100%;
             max-width: 900px;
             background: var(--ps-blue);
-            border: 2px solid #4f78a7;
+            border: 2px solid var(--gold);
             padding: 40px;
-            box-shadow: 0 0 80px rgba(0, 255, 102, 0.1);
+            box-shadow: 0 0 100px rgba(255, 215, 0, 0.1);
         }
-        .header { border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 20px; margin-bottom: 30px; }
-        .title { color: var(--neon-green); font-size: 2.2rem; letter-spacing: 10px; margin: 0; }
+        h1 { color: var(--gold); text-align: center; letter-spacing: 10px; margin: 0 0 30px 0; }
         
-        .path-alert {
-            background: rgba(0, 255, 102, 0.05);
-            border-left: 4px solid var(--neon-green);
-            padding: 20px;
-            margin-bottom: 25px;
+        .status-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
         }
-        .path-alert h3 { color: var(--neon-green); margin-top: 0; font-size: 0.9rem; text-transform: uppercase; }
-        .step { margin: 10px 0; font-size: 0.9rem; }
-        .cmd { background: #000; padding: 10px; display: block; margin-top: 5px; color: #fff; }
+        .stat-card {
+            background: rgba(0,0,0,0.5);
+            padding: 15px;
+            border: 1px solid var(--neon);
+            text-align: center;
+        }
+        .stat-card div:first-child { font-size: 0.7rem; color: var(--neon); text-transform: uppercase; }
+        .stat-card div:last-child { font-size: 1.5rem; font-weight: bold; margin-top: 5px; }
 
-        footer { margin-top: 30px; font-size: 0.7rem; color: #4f78a7; text-align: center; }
+        .log-stream {
+            background: #000;
+            padding: 20px;
+            border-left: 4px solid var(--gold);
+            font-size: 0.85rem;
+            color: #ccc;
+        }
+        .success-flash { color: var(--neon); font-weight: bold; }
+
+        footer { text-align: center; margin-top: 40px; font-size: 0.7rem; opacity: 0.5; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1 class="title">GAÏA</h1>
-            <p style="font-size: 0.7rem; letter-spacing: 2px;">DEEP DIRECTORY RESOLUTION</p>
+    <div class="audit-panel">
+        <h1>GAÏA : AUDIT</h1>
+        
+        <div class="status-grid">
+            <div class="stat-card">
+                <div>Mémoire</div>
+                <div class="success-flash">ANCRÉE</div>
+            </div>
+            <div class="stat-card">
+                <div>Rapports .md</div>
+                <div>DISPONIBLES</div>
+            </div>
+            <div class="stat-card">
+                <div>Gouvernance</div>
+                <div style="color: var(--gold);">ACTIVE</div>
+            </div>
         </div>
 
-        <div class="path-alert">
-            <h3>Correction de la trajectoire</h3>
-            <div class="step">1. Accéder au sous-répertoire :
-                <code class="cmd">cd gaia_agi_mvp</code>
-            </div>
-            <div class="step">2. Initialiser le module :
-                <code class="cmd">$env:PYTHONPATH = ".."; python -m gaia.cli demo --systemic</code>
-            </div>
-        </div>
-
-        <div style="font-size: 0.8rem; color: #aaa; text-align: center;">
-            "La Gardienne descend d'un niveau pour atteindre le cœur cognitif."
+        <div class="log-stream">
+            > [SYNC] : Instruction "Biosphère" traitée.<br>
+            > [AUTH] : Épisode stocké sous ID db23a4b5.<br>
+            > [TRANSPARENCE] : Rapport de verdict généré dans /reports/.<br>
+            > <span class="success-flash">SYSTÈME EN ATTENTE DE CONSOLIDATION.</span>
         </div>
 
         <footer>
-            ARCHITECTE : ECOGEOMAN // GHOST MODE // NEON GENESIS 3.6
+            ARCHITECTE : ECOGEOMAN // GHOST MODE // NEON GENESIS 4.9
         </footer>
     </div>
 </body>
